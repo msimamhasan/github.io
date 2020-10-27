@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="full_wrapper">
+      <div class="main_wrapper">
+        <form name="form">
+          <div class="calculator_display">
+            <input type="text" placeholder="Enter Value" disabled name="display" />
+          </div>
+
+        <div class="top">
+          <div class="cancel">
+            <input
+              type="button"
+              value="cancel"
+              onclick="display.value = null"
+            />
+          </div>
+
+          <div class="btn_item del">
+            <input
+              type="button"
+              value="DEL"
+              onclick="form.display.value= form.display.value.slice(0, -1)"
+            />
+          </div>
+        </div>
+        
+        </div>
+          <div class="calculator_btn">
+            <div class="btn_item">
+              <input
+                type="button"
+                value="7"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="8"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="9"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del">
+              <input
+                type="button"
+                value="*"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="4"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="5"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="6"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del">
+              <input
+                type="button"
+                value="+"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="1"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="2"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="3"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del">
+              <input
+                type="button"
+                value="-"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del">
+              <input
+                type="button"
+                value="0"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del ">
+              <input
+                type="button"
+                value="."
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item del">
+              <input
+                type="button"
+                value="/"
+                onclick="input_value(this.value)"
+              />
+            </div>
+            <div class="btn_item">
+              <input
+                type="button"
+                value="="
+                onclick="form.display.value = eval(form.display.value)"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function input_value(data) {
+        form.display.value = form.display.value + data;
+      }
+    </script>
+  </body>
+</html>
